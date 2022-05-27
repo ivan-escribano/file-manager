@@ -1,0 +1,79 @@
+/************PROYECTO RESUMEN**********************/
+
+-EXPLORADOR DE ARCHIVOS(PARECIDO AL DRIVE GOOGLE , ONE DRIVE).
+-NAVEGAR , CREAR , SUBIR ARCHIVOS... ETC
+-VER Y MANIPULACIÓN DE ARCHIVOS.
+ ASOCIADOS A UNA RUTA.
+
+
+/****************OBJETIVOS******************/
+-APRENDER FILE SYSTEM Y COMO FUNCIONA DE PHP
+-CREAR, MODIFICAR Y BORRAR DIRECTORIOS.
+-NAVEGAR POR LOS DIRECOTRO, EL PATH INICIAL SERA LLAMADA ROOT(CARPETA PRINCIPAL)
+-BUSCAR DIRECTORIOS Y ARCHIVOS POR NOMBRE(TAMBIEN ESPECIFICANDO SU EXTENSION SI EL USUARIO CREE NECESARIO).
+-NAVEGAR POR LOS DIRECTORIOS DENTRO DEL ROOT(CARPETA INCIAL)
+-SUBIR ARCHIVO A UN DIRECTORIO
+-PODER VER LA FECHA DE CREACIÓN, ULTIMA MODIFICACIÓN, EXTENSION , TAMAÑO(MENOS A 1MB MOTSRAR KB)
+-MOSTRAR ICONOS DE LOS ARCHIVOS SI LA EXTENSION ES:
+doc
+csv
+jpg
+png
+txt
+ppt
+odt
+pdf
+zip
+rar
+exe
+svg
+mp3
+mp4
+-PODER VER LAS IMAGENES
+-VER VIDEOS 
+-OIR AUDIOS.
+
+/*******PASOS**********/
+-HABLAR DEL PROYECTO Y DE LOS REQUEIMIENTOS
+-MIRAR VIDEOS RELACIONADOS
+-GITHUB PREPARACIÓN
+-DISEÑAR LA APLICACIÓN EN PAPEL
+-DISEÑAR LA APLICACIÓN EN DIAGRAM
+-MIRAR DISEÑOS FIGMA
+-DISEÑAR LA APLICACIÓN EN FIGMA
+-ORGANIZAR PASOS DEL PROYECTO, FUNCIONES , ARCHIVOS ETC..
+-DISTRIBUCIÓN DE TAREAS OR PEER CODING
+-PONERSE A PROGRAMAR
+
+/*****************REQUIREMENTS*************************/
+Requirements documentation
+Wireframes
+Use case diagram
+Record of incidents that were detected during project execution
+Record of lessons learned
+You will not be able to use global variables in PHP.
+You must use GIT
+You must use the PHP > v8
+Create a clear and orderly directory structure
+Both the code and the comments must be written in English
+Use the camelCase code style to define variables and functions
+In the case of using HTML, never use inline styles
+In the case of using different programming languages ​​always define the implementation in separate terms
+Remember that it is important to divide the tasks into several sub-tasks so that in this way you can associate each particular step of the construction with a specific commit
+You should try as much as possible that the commits and the planned tasks are the same
+Delete files that are not used or are not necessary to evaluate the project
+
+
+
+/*************ENTREGA*****************/
+To evaluate the project you will need the following deliveries:
+Forked repository with code: https://github.com/assembler-institute/filesystem-explorer
+You must create a correctly documented README file in the root directory of the project (see guidelines in Resources)
+Project documentation in PDF format
+Presentation in PDF format explaining:
+Comparison of the original design (Wireframe) with the final result of the project
+Comparison of the use case diagram with the actions that the user can finally perform
+Comparison of the original use case diagram with the final user actions
+What lessons you’ve learned during this project
+What problems have you encountered when developing this project?
+How you have organized and distributed the tasks
