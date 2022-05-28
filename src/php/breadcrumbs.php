@@ -20,7 +20,5 @@ foreach ($bredCrumbsNames as $key => $bredCrumb) {
         $more = "<span> > </span>";
     }
     //At the path to "a" element to every value of the breadcrumbs
-    echo "<li><img src='./images/folder_icon.png' width='12' /> <a  href='?path=$breadCPath'>$bredCrumb</a> &nbsp; 
-                           $more
-                           </li>";
+    echo "<span class='breadcrumbs__item'><img src='src/assets/images/folder_icon.png' width='12' /><a  href='?path=$breadCPath'>$bredCrumb</a> &nbsp; $more</span>";
 }

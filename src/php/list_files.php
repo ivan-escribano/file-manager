@@ -20,19 +20,21 @@ foreach ($fileListing as $file) {
 rsort($folders);
 rsort($files);
 
-//If directory is empty..
-if (count($folders) == 0 && count($files) == 0) {
-    echo "<div>Folder is empty.</div>";
-}
-//loop trough folders array
-foreach ($folders as $folderName) {
-    //TODO FILEINFO UTILITY  if the "filepath" cotains current path + folder/file path for when you click "a" element than you passed with GET METHOD why $fileInfo only contains $dir with "root" folder not the current, also is not used 
-    // $fileInfo = $dir . "/" . $folderName;
-    $filePath = $urlPath . '/' . $folderName;
-    //create element "a" with a link to the specified file path of the folder/file clicked
-    //Pass as GET the new path with the "folder"/"file" name clicked to access new path
-    echo "<li> <img src='./images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a></li>";
-}
+
+    //If directory is empty..
+    if (count($folders) == 0 && count($files) == 0) {
+        echo "<div>Folder is empty.</div>";
+    }
+    //loop trough folders array
+    foreach ($folders as $folderName) {
+        //TODO FILEINFO UTILITY  if the "filepath" cotains current path + folder/file path for when you click "a" element than you passed with GET METHOD why $fileInfo only contains $dir with "root" folder not the current, also is not used 
+        // $fileInfo = $dir . "/" . $folderName;
+        $filePath = $urlPath . '/' . $folderName;
+        //create element "a" with a link to the specified file path of the folder/file clicked
+        //Pass as GET the new path with the "folder"/"file" name clicked to access new path
+        echo "<section class='files__conatiner-folder'> <img src='src/assets/images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a></section>";
+    }
+
 
 
 foreach ($files as $fileName) {
@@ -44,8 +46,10 @@ foreach ($files as $fileName) {
     $viewFile = $fullUrl . '&' . 'view=' .  $fileName;
     //create element "a" with a link to the specified file path of the folder/file clicked
     //Pass as GET the new path with the "folder"/"file" name clicked to access new path
-    echo "<li> <img src='./images/file_icon.png' width='12' /> <a href='javascript:;'>$fileName</a> 
-                                <a href='$viewFile' class='view_btn'>View</a>    
-                                <a href='$deleteUrl' class='delete_btn'>Delete</a>
-                            </li>";
+    echo "<section class='files__conatiner-item'> 
+    <div><img src='src/assets/images/file_icon.png' width='12' /> <a href='javascript:;'>$fileName</a></div> 
+                                <div><a href='$viewFile' class='view_btn'>View</a>    
+                                 <a href='$deleteUrl' class='delete_btn'>Delete</a> </div>
+                            </section>";
 }
+
