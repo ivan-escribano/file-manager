@@ -8,10 +8,119 @@
 body {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }
+/*!NAVBAR MENU*/
+.nav__menu {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.breadcrumbs {
+}
+
+.breadcrumbs__item {
+}
+.serchbar {
+}
+
 /*!FILE MANAGER CONTAINER */
 .file__manager {
   border: 1px solid black;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+/*!LEFT SIDE MENU*/
+.left__menu {
+  border: 1px solid black;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+/*!LEFT SIDE MENU CONTAINERS*/
+.create__conatiner {
+  border: 1px solid black;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.search__type {
+  border: 1px solid black;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/*!LEFT SIDE MENU BUTTONS*/
+.primary__btn {
+  margin: 0.5rem;
+}
+.create__btn {
+}
+.upload__btn {
+}
+.search__type-button {
+  margin: 1rem;
+}
+/*MAIN CONTENT CONTAINER*/
+.files__conatiner {
+  border: 1px solid black;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.files__conatiner-folder {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+}
+.files__conatiner-item {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 255, 13);
+  height: 100px;
+  width: 100px;
+}
+
+/*ASIDE*/
+.aside__info {
+  margin: 1rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.aside__img {
+  margin: 1rem;
+  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+}
+.aside__details {
+  margin: 1rem;
+  border: 1px solid rgb(21, 255, 0);
+}
+.aside__details-list {
+  list-style: none;
+}
+.aside__btn {
+  margin: 1rem;
 }
