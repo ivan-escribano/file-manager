@@ -1,55 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
 /*!RESET*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Sora", sans-serif;
 }
 /*!GENERAL STYLES*/
+:root {
+  --primary-color: #00c2ff;
+  --secondary-color: #a0e2f7;
+  --light-color: #e3eaf8;
+  --dark-color: rgba(0, 0, 0, 0.925);
+}
 body {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  background-color: var(--dark-color);
 }
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+/*!MAIN FILE MANAGER CONTAINER*/
+.file-manager-container {
+}
+
 /*!NAVBAR MENU*/
 .nav__menu {
-  margin: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--light-color);
 }
 
-.breadcrumbs {
+/*!BREADCRUMBS*/
+.breadcrumbs__separator {
+  color: black;
+  font-weight: 900;
+}
+.breadcrumbs__separator > img {
+  width: 1rem;
+}
+.breadcrumbs__item a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+.breadcrumbs__item > * {
+  padding: 0 0.5rem;
 }
 
-.breadcrumbs__item {
+/*!SEARCHBAR*/
+.searchbar {
 }
-.serchbar {
+
+.searchbar__input {
+  border: none;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+.searchbar__btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 /*!FILE MANAGER CONTAINER */
 .file__manager {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 /*!LEFT SIDE MENU*/
 .left__menu {
-  border: 1px solid black;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
+  background-color: var(--light-color);
 }
 /*!LEFT SIDE MENU CONTAINERS*/
 .create__container {
-  border: 1px solid black;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
+}
+.create__container > form {
+  padding: 1rem;
 }
 .search__type {
   border: 1px solid black;
@@ -59,16 +98,14 @@ body {
 }
 
 /*!LEFT SIDE MENU BUTTONS*/
-.primary__btn {
-  margin: 0.5rem;
-}
-.create__btn {
-}
+.create__btn,
 .upload__btn {
+  padding: 0.5rem 1rem;
 }
 .search__type-button {
   margin: 1rem;
 }
+
 /*MAIN CONTENT CONTAINER*/
 .files__container {
   border: 1px solid black;

@@ -17,8 +17,8 @@ foreach ($bredCrumbsNames as $key => $bredCrumb) {
     //TODO ">" string every value but not in the last value root ">" test ">" test2 ""
     $more = "";
     if ((count($bredCrumbsNames) - 1) != $key) {
-        $more = "<span> > </span>";
+        $more = "<span class='breadcrumbs__separator'> <img src='src/assets/images/right-arrow.png' /></span>";
     }
     //At the path to "a" element to every value of the breadcrumbs
-    echo "<span class='breadcrumbs__item'><img src='src/assets/images/folder_icon.png' width='12' /><a  href='?path=$breadCPath'>$bredCrumb</a> &nbsp; $more</span>";
+    echo "<span class='breadcrumbs__item'><a  href='?path=$breadCPath'>$bredCrumb</a> &nbsp; $more</span>";
 }

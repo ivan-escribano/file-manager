@@ -1,7 +1,6 @@
 <?php
 //Get the path for the folders and files
 require_once "./src/php/get_path.php";
-echo $urlPath;
 ?>
 
 
@@ -18,7 +17,7 @@ echo $urlPath;
 </head>
 
 <body>
-  <main>
+  <main class="file-manager-container">
     <nav class="nav__menu">
       <div class="breadcrumbs">
         <?php
@@ -27,7 +26,7 @@ echo $urlPath;
         require_once "./src/php/breadcrumbs.php";
         ?>
       </div>
-      <div class="serchbar">
+      <div class="searchbar">
 
         <form id="searchBarForm" >
           <input type="text" class="searchbar__input" name="searchValue" />
@@ -41,14 +40,16 @@ echo $urlPath;
         <div class="create__container">
           <!--CREATE FOLDER-->
           <form id="createFolder">
-            <button class="primary__btn create__btn" type="submit" name="submitFolder">CREATE</button>
-            Name:
+            <button class="primary-btn create__btn" type="submit" name="submitFolder">CREATE</button>
+            <label for="">
+              Name Folder:
             <input type="text" name="nameFolder">
             <input type="hidden" name="url" value="<?= $urlPath ?>">
+          </label>
           </form>
           <!--CREATE FILE-->
           <form id="createFile" enctype="multipart/form-data">
-            <button class="primary__btn upload__btn" type="submit" name="submitFile">UPLOAD</button>
+            <button class="primary-btn upload__btn" type="submit" name="submitFile">UPLOAD</button>
             Name:
             <input type="file" name="file" id="inputFile">
             <input type="hidden" name="url" value="<?= $urlPath ?>">
