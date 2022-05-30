@@ -45,7 +45,7 @@ body {
   flex-direction: column;
 }
 /*!LEFT SIDE MENU CONTAINERS*/
-.create__conatiner {
+.create__container {
   border: 1px solid black;
   margin: 1rem;
   display: flex;
@@ -70,7 +70,7 @@ body {
   margin: 1rem;
 }
 /*MAIN CONTENT CONTAINER*/
-.files__conatiner {
+.files__container {
   border: 1px solid black;
   margin: 1rem;
   display: grid;
@@ -80,7 +80,7 @@ body {
   grid-row-gap: 1rem;
 }
 
-.files__conatiner-folder {
+.files__container-folder {
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ body {
   height: 100px;
   width: 100px;
 }
-.files__conatiner-item {
+.files__container-item {
   margin: 1rem;
   display: flex;
   flex-direction: column;

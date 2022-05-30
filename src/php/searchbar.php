@@ -25,7 +25,7 @@ foreach ($filesIterator as $file) {
           $filePath = str_replace("../../", "", $actualPath);
           //TODO change atritbutes and structure if needed. view and delete, ALSO REDUAN** filepath needed? to your implementation
           //Concatenate string
-          $htmlObject .= "<section class='files__conatiner-item'><div><img src='../assets/images/file_icon.png' width='12' /><a href=?$filePath>$fileName</a></div></section>";
+          $htmlObject .= "<section class='files__container-item'><div><img src='../assets/images/file_icon.png' width='12' /><a href=?$filePath>$fileName</a></div></section>";
      }
 }
 //Print all the elements equals to searched value

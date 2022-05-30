@@ -33,7 +33,7 @@ rsort($files);
         $filePath = $urlPath . '/' . $folderName;
         //create element "a" with a link to the specified file path of the folder/file clicked
         //Pass as GET the new path with the "folder"/"file" name clicked to access new path
-        echo "<section class='files__conatiner-folder'> <img src='src/assets/images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a></section>";
+        echo "<section class='files__container-folder'> <img src='src/assets/images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a></section>";
     }
 
 
@@ -47,7 +47,7 @@ foreach ($files as $fileName) {
     $viewFile = $fullUrl . '&' . 'view=' .  $fileName;
     //create element "a" with a link to the specified file path of the folder/file clicked
     //Pass as GET the new path with the "folder"/"file" name clicked to access new path
-    echo "<section class='files__conatiner-item'> 
+    echo "<section class='files__container-item'> 
     <div><img src='src/assets/images/file_icon.png' width='12' /> <a href='javascript:;'>$fileName</a></div> 
                                 <div><a href='$viewFile' class='view_btn'>View</a>    
                                  <a href='$deleteUrl' class='delete_btn'>Delete</a> </div>

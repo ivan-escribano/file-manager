@@ -38,7 +38,7 @@ echo $urlPath;
     </nav>
     <section class="file__manager">
       <section class="left__menu">
-        <div class="create__conatiner">
+        <div class="create__container">
           <!--CREATE FOLDER-->
           <form id="createFolder">
             <button class="primary__btn create__btn" type="submit" name="submitFolder">CREATE</button>
@@ -56,14 +56,14 @@ echo $urlPath;
 
         </div>
         <section class="search__type">
-          <form action="./src/php/searchButtons.php" method="POST">
-          <button class="search__type-button" type="submit" name="sarchFile">FILES</button>
-          <button class="search__type-button" type="submit" name="searchImage">IMAGES</button>
-          <button class="search__type-button" type="submit" name="searchVideo">VIDEOS</button>
+          <form id="searchFormBtn">
+          <button class="search__type-button" type="submit" name="searchFile" id="searchFile">FILES</button>
+          <button class="search__type-button" type="submit" name="searchImage" id="searchImage">IMAGES</button>
+          <button class="search__type-button" type="submit" name="searchVideo" id="searchVideo">VIDEOS</button>
         </form>
         </section>
       </section>
-      <section class="files__conatiner" id="fileContainer">
+      <section class="files__container" id="fileContainer">
         <?php
         //Do functionality to listing files
         require_once "./src/php/list_files.php";
