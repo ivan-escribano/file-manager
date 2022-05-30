@@ -30,9 +30,14 @@ rsort($files);
         //TODO FILEINFO UTILITY  if the "filepath" cotains current path + folder/file path for when you click "a" element than you passed with GET METHOD why $fileInfo only contains $dir with "root" folder not the current, also is not used 
         // $fileInfo = $dir . "/" . $folderName;
         $filePath = $urlPath . '/' . $folderName;
+        //GET DATA FROM FOLDER
         //create element "a" with a link to the specified file path of the folder/file clicked
         //Pass as GET the new path with the "folder"/"file" name clicked to access new path
-        echo "<section class='files__conatiner-folder'> <img src='src/assets/images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a></section>";
+        echo "<section class='files__conatiner-folder'> <img src='src/assets/images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a>
+        <form action='' method='POST'>
+        <input type='submit' name='location[$filePath]' value='INFO' />
+        <form>
+        </section>";
     }
 
 
@@ -40,16 +45,18 @@ rsort($files);
 foreach ($files as $fileName) {
     //TODO FILEINFO UTILITY
     // $fileInfo = $dir . "/" . $fileName;
+    $fileInfo = $urlPath . '/' . $fileName;
     //TODO VIEW AND DELETE  , $_SERVER[REQUEST_URI]
-    $fullUrl = $_SERVER['REQUEST_URI'];
-    $deleteUrl = $fullUrl . '&' . 'delete=' .  $fileName;
-    $viewFile = $fullUrl . '&' . 'view=' .  $fileName;
     //create element "a" with a link to the specified file path of the folder/file clicked
     //Pass as GET the new path with the "folder"/"file" name clicked to access new path
     echo "<section class='files__conatiner-item'> 
-    <div><img src='src/assets/images/file_icon.png' width='12' /> <a href='javascript:;'>$fileName</a></div> 
-                                <div><a href='$viewFile' class='view_btn'>View</a>    
-                                 <a href='$deleteUrl' class='delete_btn'>Delete</a> </div>
-                            </section>";
+        <div>
+        <img src='src/assets/images/file_icon.png' width='12' /> <a href='javascript:;'>$fileName</a>
+        </div> 
+        <form action='' method='POST'>
+        <input type='submit' name='location[$fileInfo]' value='INFO' />
+        <form>
+        </section>";
 }
+
 
