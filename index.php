@@ -70,23 +70,11 @@ require_once "./src/php/get_path.php";
         require_once "./src/php/list_files.php";
         ?>
       </section>
-      <aside class="aside__info">
-        <div class="aside__btn">
-          <button>aside btn</button>
-        </div>
-        <div class="aside__img">
-          <img src="" alt="" />
-        </div>
-        <section class="aside__details">
-          <ul class="aside__details-list">
-            <li>Name</li>
-            <li>Type</li>
-            <li>Date Creation</li>
-            <li>Date modification</li>
-            <li>Size</li>
-          </ul>
-        </section>
-      </aside>
+        <?php
+        //Do functionality to show data
+        require_once "./src/php/view_data.php";
+        require_once "./src/php/edit_name.php";
+        ?>
     </section>
   </main>
 </body>
