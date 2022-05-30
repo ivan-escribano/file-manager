@@ -28,10 +28,12 @@ echo $urlPath;
         ?>
       </div>
       <div class="serchbar">
-        <form action="">
-          <input type="text" class="searchbar__input" />
-          <button>SEARCH</button>
+
+        <form id="searchBarForm" >
+          <input type="text" class="searchbar__input" name="searchValue" />
+          <button type="submit" class="searchbar__btn primary-btn" name="sendSearch">SEARCH</button>
         </form>
+
       </div>
     </nav>
     <section class="file__manager">
@@ -42,21 +44,23 @@ echo $urlPath;
             <button class="primary__btn create__btn" type="submit" name="submitFolder">CREATE</button>
             Name:
             <input type="text" name="nameFolder">
-            <input type="text" name="url" value="<?= $urlPath ?>">
+            <input type="hidden" name="url" value="<?= $urlPath ?>">
           </form>
-           <!--CREATE FILE-->
-           <form id="createFile" enctype="multipart/form-data">
-          <button class="primary__btn upload__btn" type="submit" name="submitFile">UPLOAD</button>
+          <!--CREATE FILE-->
+          <form id="createFile" enctype="multipart/form-data">
+            <button class="primary__btn upload__btn" type="submit" name="submitFile">UPLOAD</button>
             Name:
             <input type="file" name="file" id="inputFile">
-            <input type="text" name="url" value="<?= $urlPath ?>">
+            <input type="hidden" name="url" value="<?= $urlPath ?>">
           </form>
 
         </div>
         <section class="search__type">
-          <button class="search__type-button">FILES</button>
-          <button class="search__type-button">IMAGES</button>
-          <button class="search__type-button">VIDEOS</button>
+          <form action="./src/php/searchButtons.php" method="POST">
+          <button class="search__type-button" type="submit" name="sarchFile">FILES</button>
+          <button class="search__type-button" type="submit" name="searchImage">IMAGES</button>
+          <button class="search__type-button" type="submit" name="searchVideo">VIDEOS</button>
+        </form>
         </section>
       </section>
       <section class="files__conatiner" id="fileContainer">

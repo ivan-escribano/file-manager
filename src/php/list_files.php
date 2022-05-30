@@ -25,6 +25,7 @@ rsort($files);
     if (count($folders) == 0 && count($files) == 0) {
         echo "<div>Folder is empty.</div>";
     }
+    
     //loop trough folders array
     foreach ($folders as $folderName) {
         //TODO FILEINFO UTILITY  if the "filepath" cotains current path + folder/file path for when you click "a" element than you passed with GET METHOD why $fileInfo only contains $dir with "root" folder not the current, also is not used 

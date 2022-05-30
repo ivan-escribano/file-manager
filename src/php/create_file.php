@@ -10,38 +10,38 @@ $fileSize = $_FILES["file"]["size"];
 $fileError = $_FILES["file"]["error"];
 $fileType = $_FILES["file"]["type"];
 $urlPath = $_POST["url"];
-echo "$urlPath";
+
 //Get the file extension : 
 //1. get array with value every "."
 $fileExt = explode(".", $fileName);
 //2. get the last value of the array
 $fileActualExt = strtolower(end(($fileExt)));
 //Array with all 
-$allowed = array('doc','csv','jpg','png','txt','ppt','odt','pdf','zip','rar','exe','svg','mp3','mp4');
+$allowed = array('doc', 'csv', 'jpg', 'png', 'txt', 'ppt', 'odt', 'pdf', 'zip', 'rar', 'exe', 'svg', 'mp3', 'mp4');
 
 //Check if the ext of the file uploaded its in the array of ext allowed
-    //param1 : ext to search , param2: array
-    if(in_array($fileActualExt ,  $allowed)){
-        //check for error 0 is OK 8 error messages represented in numbers
-        if($fileError === 0){
-            //check the file size
-            if ($fileSize < 1000000) {
-                //add file to specified location
-                $fileDestination = "../../$urlPath/$fileName";
+//param1 : ext to search , param2: array
+if (in_array($fileActualExt,  $allowed)) {
+    //check for error 0 is OK 8 error messages represented in numbers
+    if ($fileError === 0) {
+        //check the file size
+        if ($fileSize < 1000000) {
+            //add file to specified location
+            $fileDestination = "../../$urlPath/$fileName";
+            //check if file exist in directory
+            if (!file_exists($fileDestination)) {
                 //The uploaded file is stored in a temporary location, need to move to temporary location to actual location specified
-                move_uploaded_file($fileTmpName , $fileDestination);
-                echo"FILE UPLOADED";
+                move_uploaded_file($fileTmpName, $fileDestination);
+                echo "File uploaded";
+            } else {
+                echo "File already exist in the given path";
             }
-            else {
-               echo "file to big";
-            }
+        } else {
+            echo "File size is bigger than the allowed";
         }
-        else{
-            echo "ERROR message";
-        }
-       }
-       else{
-           echo "not allowed extension";
-       }
-   
-   
+    } else {
+        echo "Error in file please check the file";
+    }
+} else {
+    echo "Not allowed extension";
+}
