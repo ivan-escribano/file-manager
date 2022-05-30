@@ -35,9 +35,10 @@ rsort($files);
         //Pass as GET the new path with the "folder"/"file" name clicked to access new path
         echo "<section class='files__conatiner-folder'> <img src='src/assets/images/folder_icon.png' width='12' /> <a href='?path=$filePath'>$folderName</a>
         <form action='' method='POST'>
-        <input type='submit' name='location[$filePath]' value='INFO' />
+        <button class='remove__defaultStyle-Btn file__info-btn' type='submit' name='location[$filePath]'><img src='src/assets/images/info_btn.png' width='25
+        ' /></button>
         <form>
-        </section>";
+        </section></a>";
     }
 
 
@@ -54,7 +55,8 @@ foreach ($files as $fileName) {
         <img src='src/assets/images/file_icon.png' width='12' /> <a href='javascript:;'>$fileName</a>
         </div> 
         <form action='' method='POST'>
-        <input type='submit' name='location[$fileInfo]' value='INFO' />
+        <button class='remove__defaultStyle-Btn file__info-btn' type='submit' name='location[$fileName]'><img src='src/assets/images/info_btn.png' width='25
+        ' /></button>
         <form>
         </section>";
 }

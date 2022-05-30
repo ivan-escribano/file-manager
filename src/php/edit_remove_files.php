@@ -31,7 +31,7 @@ if(file_exists($filePath)){
 }
 clearstatcache();
 //Refresh the page with the changes
-header('Location: '.$_SERVER['REQUEST_URI']);
+// header('Location: '.$_SERVER['REQUEST_URI']);
 }
 //Check when the delete button is submited
 if(isset($_POST['delete'])){
@@ -58,7 +58,7 @@ if(isset($_POST['delete'])){
         }else{
             echo"file does not exist";
         }
-    clearstatcache();
-    //Refresh the page with the changes
-     header('Location: '.$_SERVER['REQUEST_URI']);
+// clearstatcache();
+// //Refresh the page with the changes
+// header('Location: '.$_SERVER['REQUEST_URI']);
     }

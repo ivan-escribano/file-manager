@@ -55,7 +55,7 @@ require_once "./src/php/get_path.php"
         <?php
         //Do functionality to show data
         require_once "./src/php/view_data.php";
-        require_once "./src/php/edit_name.php";
+        require_once "./src/php/edit_remove_files.php";
         ?>
 
         

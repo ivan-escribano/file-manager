@@ -22,11 +22,11 @@ $fileBasename=$fileData['basename'];
  echo   "<aside class='aside__info'>
           <div class='aside__btn'>
          <form action='' method='POST'>
-        <input type='text' name='newName' />
-        <input type='submit' name='rename[$filePath]' value='EDIT' />
+         <button class='remove__defaultStyle-Btn file__info-btn' type='submit' name='rename[$filePath]'><img src='src/assets/images/pen.png' width='20'></button>
+         <input type='text' name='newName' />
         </form>
         <form action='' method='POST'>
-        <input type='submit' name='delete[$filePath]' value='DELETE' />
+        <button class='remove__defaultStyle-Btn file__info-btn' type='submit' name='delete[$filePath]'><img src='src/assets/images/trash.png' width='20'></button>
         <form>
           </div>
           <div class='aside__img'>
